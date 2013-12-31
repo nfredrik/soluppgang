@@ -23,7 +23,7 @@ def save_json(file, data):
 
 page=urllib2.urlopen("http://www.nordpoolspot.com")
 soup = BeautifulSoup(page.read())
-mhw_sek=soup.findAll('td',{'class':'preliminary'})
+mhw_sek=soup.findAll('td',{'class':'price-official'})
 #print mhw_sek[1]['title']
 print "Captured from www.nordpoolspot.com"
 print "Spot price:", mhw_sek[1].renderContents(), "SEK/MWh"
